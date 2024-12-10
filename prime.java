@@ -1,17 +1,17 @@
-public class Prime {
+public class Main{
     public static void main(String[] args) {
+        System.out.println("Prime numbers between 1 and 100 are:");
 
-       
-        for (int num = 2; num <= 100; num++) {
-            boolean isPrime = true;
-            for (int i = 2; i <= Math.sqrt(num); i++) {
-                if (num % i == 0) { 
-                    isPrime = false;
-                    break;
+        for (int number = 1; number <= 100; number++) {
+            int count = 0;
+
+            for (int i = 1; i <= number; i++) {
+                if (number % i == 0) {
+                    count++; 
                 }
             }
-            if (isPrime) {
-                System.out.println(num);
+            if (count == 2) {
+                System.out.print(number + " ");
             }
         }
     }
